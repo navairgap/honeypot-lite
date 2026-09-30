@@ -26,3 +26,6 @@ Defensive education tool. Run it on a VPS you own, never on shared infrastructur
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
+---
+maintained · verified 2026-09-30
