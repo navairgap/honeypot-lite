@@ -33,3 +33,13 @@ maintained · verified 2026-09-30
 maintained · verified 2026-10-01
 ---
 maintained · verified 2026-10-02
+
+## Log format
+
+Events are appended to `logs/honeypot.jsonl`, one JSON object per line:
+
+```json
+{"ts":"2026-10-03T17:55:12Z","service":"ssh","src":"185.220.101.4","event":"auth_attempt","user":"root","password":"admin123"}
+```
+
+Ship the file to your SIEM or analyze with `jq`.
