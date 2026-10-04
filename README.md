@@ -43,3 +43,19 @@ Events are appended to `logs/honeypot.jsonl`, one JSON object per line:
 ```
 
 Ship the file to your SIEM or analyze with `jq`.
+
+## Docker Compose
+
+```yaml
+services:
+  honeypot:
+    build: .
+    ports:
+      - "2222:2222"
+      - "8080:8080"
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+```
+
+`docker compose up -d` — logs land in `./logs/honeypot.jsonl`.
