@@ -59,3 +59,8 @@ services:
 ```
 
 `docker compose up -d` — logs land in `./logs/honeypot.jsonl`.
+
+
+## Running it legally
+
+Honeypots are fine on networks you own or administer. Capturing attack traffic from others' networks without authorization is not. Know your jurisdiction before exposing it publicly.
