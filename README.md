@@ -69,3 +69,8 @@ Honeypots are fine on networks you own or administer. Capturing attack traffic f
 ## Tuning
 
 `-v` raises emulation fidelity (slower, noisier logs). most deployments want `-q` and high volume: better odds of catching a real campaign. prune logs older than 90 days; attacker TTPs go stale fast.
+
+
+## Analysis
+
+quick wins with jq: `jq -r 'select(.service=="ssh") | .user' logs/*.jsonl | sort | uniq -c | sort -rn | head` — top tried usernames. same shape works for passwords and source IPs.
