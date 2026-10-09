@@ -64,3 +64,8 @@ services:
 ## Running it legally
 
 Honeypots are fine on networks you own or administer. Capturing attack traffic from others' networks without authorization is not. Know your jurisdiction before exposing it publicly.
+
+
+## Tuning
+
+`-v` raises emulation fidelity (slower, noisier logs). most deployments want `-q` and high volume: better odds of catching a real campaign. prune logs older than 90 days; attacker TTPs go stale fast.
