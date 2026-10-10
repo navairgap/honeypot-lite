@@ -78,3 +78,7 @@ quick wins with jq: `jq -r 'select(.service=="ssh") | .user' logs/*.jsonl | sort
 ## Known limitations
 
 low-interaction means the honeypot answers login attempts and banners — it never emulates a shell. attackers who get past the prompt see nothing, which is exactly when you should graduate to a high-interaction like cowrie.
+
+## Known limitations
+
+low-interaction means the honeypot answers login attempts and banners — it never emulates a shell. attackers who get past the prompt see nothing, which is exactly when you should graduate to a high-interaction like cowrie.
