@@ -74,3 +74,7 @@ Honeypots are fine on networks you own or administer. Capturing attack traffic f
 ## Analysis
 
 quick wins with jq: `jq -r 'select(.service=="ssh") | .user' logs/*.jsonl | sort | uniq -c | sort -rn | head` — top tried usernames. same shape works for passwords and source IPs.
+
+## Known limitations
+
+low-interaction means the honeypot answers login attempts and banners — it never emulates a shell. attackers who get past the prompt see nothing, which is exactly when you should graduate to a high-interaction like cowrie.
