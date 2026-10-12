@@ -82,3 +82,10 @@ low-interaction means the honeypot answers login attempts and banners — it nev
 ## Known limitations
 
 low-interaction means the honeypot answers login attempts and banners — it never emulates a shell. attackers who get past the prompt see nothing, which is exactly when you should graduate to a high-interaction like cowrie.
+
+## Deployment checklist
+
+- [ ] isolated network segment (a honeypot on your lan is an attacker's bridge)
+- [ ] disk quota on the log dir
+- [ ] egress blocked except what you explicitly need
+- [ ] jurisdiction checked — capturing traffic on networks you don't own needs authorization
