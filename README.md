@@ -93,3 +93,7 @@ low-interaction means the honeypot answers login attempts and banners — it nev
 ## Data formats
 
 log lines are versioned: `"v":1` rides in every jsonl object. new fields arrive additively; breaking changes bump v and keep the reader able to ingest both.
+
+## Undo
+
+`docker compose down` removes the containers; the `./logs` volume stays. nothing else persists — no database, no registry, no residue.
