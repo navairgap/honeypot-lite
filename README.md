@@ -89,3 +89,7 @@ low-interaction means the honeypot answers login attempts and banners — it nev
 - [ ] disk quota on the log dir
 - [ ] egress blocked except what you explicitly need
 - [ ] jurisdiction checked — capturing traffic on networks you don't own needs authorization
+
+## Data formats
+
+log lines are versioned: `"v":1` rides in every jsonl object. new fields arrive additively; breaking changes bump v and keep the reader able to ingest both.
