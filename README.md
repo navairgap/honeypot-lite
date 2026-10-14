@@ -97,3 +97,7 @@ log lines are versioned: `"v":1` rides in every jsonl object. new fields arrive 
 ## Undo
 
 `docker compose down` removes the containers; the `./logs` volume stays. nothing else persists — no database, no registry, no residue.
+
+## FAQ
+
+**does it emulate a shell?** no — it answers login attempts and banners, then logs. attackers past the prompt see nothing, which is exactly when you graduate to a high-interaction honeypot like cowrie. **does it need internet?** only to pull the image; runtime is fully local.
