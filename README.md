@@ -101,3 +101,7 @@ log lines are versioned: `"v":1` rides in every jsonl object. new fields arrive 
 ## FAQ
 
 **does it emulate a shell?** no — it answers login attempts and banners, then logs. attackers past the prompt see nothing, which is exactly when you graduate to a high-interaction honeypot like cowrie. **does it need internet?** only to pull the image; runtime is fully local.
+
+## Internals
+
+the fake ssh server completes the banner exchange and key negotiation up to auth — enough to fingerprint tools, not enough to hand them a shell. everything after the auth attempt is theater, and the logs know it.
