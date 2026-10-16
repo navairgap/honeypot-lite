@@ -105,3 +105,7 @@ log lines are versioned: `"v":1` rides in every jsonl object. new fields arrive 
 ## Internals
 
 the fake ssh server completes the banner exchange and key negotiation up to auth — enough to fingerprint tools, not enough to hand them a shell. everything after the auth attempt is theater, and the logs know it.
+
+## Telemetry
+
+no callbacks, no update checks, no beaconing. the honeypot runs air-gapped happily — the logs it writes are the only data it ever produces, and they stay on your disk.
