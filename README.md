@@ -40,3 +40,8 @@ A low-interaction honeypot cannot reliably reproduce a real operating system or 
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+
+## Isolation first
+
+Run only in a disposable, isolated environment with an unprivileged account, no mounted host credentials, and outbound traffic denied by default. Bound connection and message sizes, rotate logs, and never execute commands derived from client input.
