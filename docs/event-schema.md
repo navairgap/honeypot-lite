@@ -33,3 +33,7 @@ The future logger should write newline-delimited JSON (JSONL), one event per lin
 ## Tests
 
 Test JSONL round trips, malformed input handling, string escaping, size limits, rotation boundaries, and continued logging after a client disconnect. No test should execute client-supplied commands or make outbound network connections.
+
+## Event sequence and clock semantics
+
+Use a per-process or per-capture sequence number to preserve event order when several events share the same timestamp. Store timestamps in UTC with an explicit offset, and do not assume wall-clock time is monotonic. If duration is measured, calculate it with a monotonic clock and store it separately from the event timestamp. On process restart, use a new session identifier so sequence numbers from different sessions cannot collide.
