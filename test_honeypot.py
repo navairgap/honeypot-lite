@@ -23,7 +23,7 @@ class HoneypotSafetyTests(unittest.TestCase):
             self.assertFalse(writer.record({"event": "too-large"}))
 
     def test_input_metadata_is_printable_and_bounded(self):
-        self.assertEqual(_clean("ok\\n\\x1b[31m", 20), "ok[31m")
+        self.assertEqual(_clean("ok\n\x1b[31m", 20), "ok[31m")
         self.assertEqual(len(_clean("a" * 300, 20)), 20)
 
     def test_public_bind_requires_explicit_confirmation(self):
